@@ -28,8 +28,9 @@ Swagger (OpenAPI)
 2. Maven installed
 3. IntelliJ IDEA
 
-# Get API 
-GET /inventory/{productId}
+# Get API
+GET 
+api url : http://localhost:8080/api/v1/inventory/get-inventory-details?productId=1001
 Sample Response:
 ===============
 
@@ -45,6 +46,7 @@ Sample Response:
 ]
 
 # Post API
+api url : http://localhost:8081/api/v1/orders/add-orders
 Request Body:
 
 {
