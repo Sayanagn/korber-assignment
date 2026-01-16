@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="2-load" author="korber">
+        <loadData
+                tableName="orders"
+                file="data/orders.csv"
+                separator=","
+                encoding="UTF-8">
+        </loadData>
+    </changeSet>
+
+    <changeSet id="3-reset-orders-sequence" author="korber">
+        <sql>
+            ALTER TABLE orders ALTER COLUMN order_id RESTART WITH
+                (SELECT MAX(order_id) + 1 FROM orders);
+        </sql>
+    </changeSet>
+
+
+</databaseChangeLog>

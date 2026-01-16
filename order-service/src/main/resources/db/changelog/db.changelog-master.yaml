@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/create.xml
+  - include:
+      file: db/changelog/load.xml
