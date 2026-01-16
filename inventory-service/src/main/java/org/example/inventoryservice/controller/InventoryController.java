@@ -1,6 +1,5 @@
 package org.example.inventoryservice.controller;
 
-
 import org.example.inventoryservice.dto.InventoryResponse;
 import org.example.inventoryservice.service.InventoryService;
 import org.springframework.web.bind.annotation.*;
