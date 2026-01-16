@@ -38,11 +38,6 @@ The project is developed and tested using IntelliJ IDEA.
 4. Run `OrderServiceApplication` to start Order Service (port 8081).
 
 
-To run Order Service:
-cd order-service
-mvn spring-boot:run
-
-
 # Get API
 GET 
 api url : http://localhost:8080/api/v1/inventory/get-inventory-details?productId=1001
